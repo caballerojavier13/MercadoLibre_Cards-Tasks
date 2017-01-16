@@ -1,0 +1,183 @@
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Administración de Tareas MercadoLibre</title>
+
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="teal">
+    <div class="nav-wrapper">
+      <ul id="" class="left">
+        <li>
+          <a id="showPorotos" class="tooltipped" data-position="right" data-delay="50" data-tooltip="Ver Porotos">
+            <i class="material-icons">assignment</i>
+          </a>
+        </li>
+      </ul>
+      <a href="#" class="brand-logo center">
+        <i class="material-icons">event_available</i>
+        Tareas Mercadolibre - Cards
+      </a>
+      <ul id="" class="right">
+        <li>
+          <a id="showTrelloBacklog" class="tooltipped" data-position="left" data-delay="50" data-tooltip="Ver Trello Backlog">
+            <i class="material-icons">dashboard</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="progress">
+      <div class="indeterminate"></div>
+    </div>
+    <div class="card z-depth-3">
+      <div class="row">      
+        <div class="col s12">
+          <ul class="tabs">
+            <li class="tab col s4 teal-text">
+              <a class="active teal-text" href="#cobranded" id="title-cobranded">
+                Cobranded <span></span>
+              </a>
+            </li>
+            <li class="tab col s4">
+
+              <a class="teal-text" href="#giftcard" id="title-giftcard">
+                GiftCard <span></span>
+              </a>
+            </li>
+            <li class="tab col s4">
+              <a class="teal-text" href="#prepaid" id="title-prepaid">
+                Prepaid <span></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="giftcard" class="col s12">
+          <div class="content-tab">
+            <ul class="collection">
+            </ul>
+          </div>
+        </div>
+        <div id="cobranded" class="col s12">
+          <div class="content-tab">
+            <ul class="collection">
+            </ul>
+          </div>
+        </div>
+        <div id="prepaid" class="col s12">
+          <div class="content-tab">
+            <ul class="collection">
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>  
+    <div class="fixed-action-btn toolbar">
+      <a class="btn-floating btn-large teal">
+        <i class="large material-icons">settings</i>
+      </a>
+      <ul>
+        <li class="waves-effect waves-light">
+          <a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Configuraciones varias">
+            <i class="material-icons">build</i>
+          </a>
+        </li>
+        <li id="showUserTaskFilter" class="waves-effect waves-light">
+          <a class=" tooltipped" data-position="top" data-delay="50" data-tooltip="Filtrar tareas">
+            <i class="material-icons">search</i>
+          </a>
+        </li>
+        <li class="waves-effect waves-light">
+          <a id="realoadApp" class=" tooltipped" data-position="top" data-delay="50" data-tooltip="Recargar">
+            <i class="material-icons">sync</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- Modal Structure -->
+    <div id="authorize-modal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>Autorizar Aplicación</h4>
+        <p>Presionando el botón "Autorizar" usted le permite a la aplicación acceder al listado de tareas</p>
+      </div>
+      <div class="modal-footer">
+        <button id="authorize-button" class=" modal-action modal-close waves-effect teal btn-flat white-text">Autorizar</button> 
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modalTrello" class="modal">
+      <div class="modal-content">
+
+        <h4>Backlog General Trello</h4>
+        <p>Backlog de tareas a nivel macro</p>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modalPoroto" class="modal">
+      <div class="modal-content">
+
+        <h4>Objetivos del </h4>
+        <p>Listado de porotos</p>
+
+        <ul class="collection porotos">
+
+        </ul>
+
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cerrar</a>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="modalUserTaskFilter" class="modal">
+      <div class="modal-content">
+        <h4>Filtrar Tareas por Persona Asignada</h4>
+        <p>Seleccionar el texto para filtrar las tareas asignadas (Dejar el campo en blanco muestra todas las tareas asignadas)</p>
+        <div class="row">
+          <div class="input-field col s12">
+            <input placeholder="Listado de palabras claves separadas por coma" id="userFilterCriterialInput" type="text">
+            <label for="userFilterCriterialInput">Filtro de tareas por asignación</label>
+          </div>
+        </div>
+        <p>
+          <input type="checkbox" id="includeAllTasks" />
+          <label for="includeAllTasks">Incluir tareas sin asignaciones</label>
+        </p>
+      </div>
+      <div class="modal-footer">
+
+        <a href="#!" id="saveUserFilterCriterialConfig" class="waves-effect waves-green btn-flat">Guardar</a>
+
+        <a href="#!" id="cancelUserFilterCriterialConfig" class=" waves-effect waves-green btn-flat">Cerrar</a>
+
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/linkify.min.js"></script>
+    <script src="js/linkify-jquery.min.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=a4072a2ca38b2c8fc2d3110d76bd8ec7"></script>
+    <script src="js/trello.js"></script>
+    <script src="js/backlog.js"></script>
+    <script src="js/poroto.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=loadApp"></script>
+  </body>
+
+  </html>

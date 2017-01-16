@@ -1,0 +1,108 @@
+.tabs{
+	overflow: hidden;
+}
+.tabs .indicator{
+	background-color: #009688!important;
+}
+
+.container .card{
+	margin-top: 20px;
+}
+
+.content-tab{
+	padding: 10px;
+}
+
+.collection{
+	border: none;
+}
+
+.backlog-trello{
+	box-shadow: 0 0 1px grey;
+	padding: 10px;
+}
+
+.backlog-trello .collection-item .secondary-content{
+	top: 8px;
+}
+
+.porotos{
+	padding: 0px;
+}
+
+.porotos .collection-item{
+	padding-left: 70px !important;
+}
+
+.porotos .collection-item.avatar p{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.porotos .collection-item .title {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.porotos .collection-item .secondary-content{
+	top: 50% !important;
+	margin-top: -12px;
+}
+
+.porotos .collection-item p{
+	color: gray;
+}
+
+.porotos .collection-item.avatar .circle {
+	top: 50%;
+	margin-top: -21px;
+}
+
+.collection .collection-item{
+	position: relative;
+	padding: 10px 34px 10px 50px !important;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border: none;
+}
+
+.collection-item .secondary-content{
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	padding: 0 5px;
+	border-radius: 0 5px 5px 0;
+}
+
+.collection-item > div{
+	padding: 0 10px;
+}
+
+.collection-item .priority{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	border-radius: 5px 0 0 5px;
+	width: 50px;
+}
+
+.collection-item .priority span{
+	width: 100%;
+}
+
+.collection-item .chip i{
+	position: relative;
+	top: 5px;
+}
+
+.collection-item .chip span{
+	position: relative;
+	top: -3px;
+}
+
+.btn-floating i {
+	width: 100%;
+	text-align: center;
+}

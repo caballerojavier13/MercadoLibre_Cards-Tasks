@@ -1,0 +1,23 @@
+{
+  "name": "tasks_fronend",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Javier Caballero"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "materialize": "^0.97.8",
+    "font-awesome": "fontawesome#^4.7.0",
+    "linkifyjs": "^2.1.3"
+  }
+}

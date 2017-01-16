@@ -1,0 +1,33 @@
+{
+  "name": "mercadolibre-cards-todolist",
+  "version": "0.0.1",
+  "description": "Lista todas las tareas por hacer o haciendo para el proyecto de Cards en MercadoLibre",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "bower": "bower install",
+    "server": "http-server ./dist -p 3000 -a 0.0.0.0 -s "
+  },
+  "author": "Javier Hernán Caballero García <caballerojavier13@gmail.com> (http://www.javiercaballero.info)",
+  "license": "MIT",
+  "dependencies": {
+    "bower": "^1.7.9",
+    "http-server": "^0.9.0"
+  },
+  "devDependencies": {
+    "bower": "^1.8.0",
+    "concurrently": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.0.3",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rm": "^1.0.2",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-fs": "^2.4.4"
+  }
+}
