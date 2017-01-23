@@ -73,6 +73,8 @@ gulp.task('htmls', function() {
 });
 
 gulp.task('hint', function() {
+	return gulp.src(__dirname + '/jshint-output.html')
+	.pipe( rm());
 	return gulp.src('./src/js/*.js')
 	.pipe(jshint())
 	.pipe(jshint.reporter('gulp-jshint-html-reporter', {

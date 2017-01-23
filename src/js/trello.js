@@ -63,7 +63,7 @@ var TrelloBacklog = (function () {
 
 									}
 
-									if( ! ((index + 1) < data.length) ){
+									if( ((index + 1) >= data.length) ){
 
 										
 										list_json.cards = cards_list;
@@ -72,7 +72,7 @@ var TrelloBacklog = (function () {
 
 										list_index = list_index + 1;
 
-										if(! (list_index < lists.length)){
+										if((list_index >= lists.length)){
 
 											module.private.showTasks(backlog_trello);
 
@@ -118,13 +118,13 @@ var TrelloBacklog = (function () {
 
 					}
 
-				})
+				});
 
 			},
 
 			getHTMLTask: function(task){
 
-				return '<a target="_blank" href="' + task.url + '" class="collection-item z-depth-1">' + task.title + '<span class="secondary-content"><i class="material-icons">send</i></span></a>'
+				return '<a target="_blank" href="' + task.url + '" class="collection-item z-depth-1">' + task.title + '<span class="secondary-content"><i class="material-icons">send</i></span></a>';
 
 			}
 
@@ -191,7 +191,7 @@ var TrelloBacklog = (function () {
 			}
 
 		}
-	}
+	};
 
 	return module.public;
 

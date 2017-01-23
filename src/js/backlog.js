@@ -428,19 +428,19 @@ var Backlog = (function () {
 				switch(status) {
 
 					case "TODO":
-					return '<div class="chip deep-orange darken-1 white-text "><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>'
+					return '<div class="chip deep-orange darken-1 white-text "><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>';
 
 					case "WIP":
-					return '<div class="chip white-text amber darken-2"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>'
+					return '<div class="chip white-text amber darken-2"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>';
 
 					case "DONE":
-					return '<div class="chip white-text teal"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>'
+					return '<div class="chip white-text teal"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>';
 
 					case "OUT":
-					return '<div class="chip cyan darken-1 white-text"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>'
+					return '<div class="chip cyan darken-1 white-text"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>';
 
 					default:
-					return '<div class="chip"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>'
+					return '<div class="chip"><i class="material-icons">turned_in_not</i> <span>' + status + '</span></div>';
 
 				}
 			},
@@ -539,7 +539,7 @@ var Backlog = (function () {
 
 			getCritearialFilterUser: function(){
 
-				return eval(localStorage.critearialFilterUser);
+				return JSON.parse(localStorage.critearialFilterUser);
 
 			},
 
@@ -552,7 +552,7 @@ var Backlog = (function () {
 
 			getCritearialIncludeAllTasks: function(){
 
-				return eval(localStorage.critearialIncludeAllTasks);
+				return localStorage.critearialIncludeAllTasks == "true";
 
 			},
 

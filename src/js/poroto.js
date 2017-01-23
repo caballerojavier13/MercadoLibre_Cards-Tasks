@@ -39,7 +39,7 @@ var Poroto = (function () {
 
 						$('#modalPoroto').find('.collection').append(module.private.getHTMLPoroto(item));
 
-					})					
+					});					
 
 				});
 
