@@ -9,7 +9,7 @@ var minifyHTML = require('gulp-minify-html');
 var rm = require( 'gulp-rm' );
 var jshint = require('gulp-jshint');
 
-gulp.task('default', ['fonts', 'styles', 'scripts', 'images', 'htmls'], function() {});
+gulp.task('default', ['fonts', 'styles', 'scripts', 'images', 'htmls','favicon'], function() {});
 
 var htmls = [
 'index.html'
@@ -46,6 +46,11 @@ gulp.task('clean', function () {
 gulp.task('fonts', function() {
 	gulp.src(fonts)
 	.pipe(gulp.dest('./dist/fonts/'));
+});
+
+gulp.task('favicon', function() {
+	gulp.src('favicon.png')
+	.pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('images', function() {
