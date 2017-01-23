@@ -1,3 +1,7 @@
+body{
+	background-color: #efefef;
+}
+
 .tabs{
 	overflow: hidden;
 }
@@ -20,6 +24,7 @@
 .backlog-trello{
 	box-shadow: 0 0 1px grey;
 	padding: 10px;
+	background-color: #efefef;
 }
 
 .backlog-trello .collection-item .secondary-content{
@@ -27,21 +32,25 @@
 }
 
 .porotos{
-	padding: 0px;
+	background-color: #efefef;
+	padding: 20px;
+	border-radius: 5px;
 }
 
 .porotos .collection-item{
-	padding-left: 70px !important;
+	left: 10px;
 }
 
 .porotos .collection-item.avatar p{
-	margin-left: 10px;
+	left: 15px;
 	margin-right: 10px;
+	position: relative;
 }
 
 .porotos .collection-item .title {
-	margin-left: 10px;
 	margin-right: 10px;
+	position: relative;
+	left: 15px;
 }
 
 .porotos .collection-item .secondary-content{
