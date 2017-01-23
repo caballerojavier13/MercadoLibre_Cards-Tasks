@@ -7,6 +7,7 @@ var autoprefix = require('gulp-autoprefixer');
 var minifyCSS = require('gulp-minify-css');
 var minifyHTML = require('gulp-minify-html');
 var rm = require( 'gulp-rm' );
+var jshint = require('gulp-jshint');
 
 gulp.task('default', ['fonts', 'styles', 'scripts', 'images', 'htmls'], function() {});
 
@@ -19,6 +20,7 @@ var scripts = [
 'bower_components/materialize/dist/js/materialize.min.js',
 'bower_components/linkifyjs/linkify.min.js',
 'bower_components/linkifyjs/linkify-jquery.min.js',
+'bower_components/moment/min/moment.m',
 'src/js/**/*'
 ];
 
@@ -68,6 +70,15 @@ gulp.task('styles', function() {
 gulp.task('htmls', function() {
 	gulp.src(htmls)
 	.pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('hint', function() {
+	return gulp.src('./src/js/*.js')
+	.pipe(jshint())
+	.pipe(jshint.reporter('gulp-jshint-html-reporter', {
+		filename: __dirname + '/jshint-output.html',
+		createMissingFolders : false  
+	}));
 });
 
 //var watcher = gulp.watch('src/css/**/*', ['fonts', 'styles']);
