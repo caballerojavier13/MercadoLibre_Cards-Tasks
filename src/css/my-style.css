@@ -70,7 +70,10 @@ body{
 .collection .collection-item{
 	position: relative;
 	padding: 10px 34px 10px 50px !important;
-	margin-bottom: 10px;
+	
+	margin: 10px;
+	overflow-wrap: break-word;
+
 	border-radius: 5px;
 	border: none;
 }
