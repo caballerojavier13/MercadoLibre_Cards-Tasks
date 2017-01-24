@@ -2,6 +2,18 @@ body{
 	background-color: #efefef;
 }
 
+nav{
+	position: fixed;
+	width: 100%;
+	z-index: 10000;
+	top: 0;
+}
+
+.container{
+	top: 60px;
+	position: relative;
+}
+
 .tabs{
 	overflow: hidden;
 }
