@@ -539,7 +539,11 @@ var Backlog = (function () {
 
 			getCritearialFilterUser: function(){
 
-				return JSON.parse(localStorage.critearialFilterUser);
+				try{
+					return JSON.parse(localStorage.critearialFilterUser);
+				}catch(error){
+					return "";
+				}
 
 			},
 

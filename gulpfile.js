@@ -16,11 +16,11 @@ var htmls = [
 ];
 
 var scripts = [
-//'bower_components/jquery/dist/jquery.min.js',
+'bower_components/jquery/dist/jquery.min.js',
 'bower_components/materialize/dist/js/materialize.min.js',
 'bower_components/linkifyjs/linkify.min.js',
 'bower_components/linkifyjs/linkify-jquery.min.js',
-'bower_components/moment/min/moment.m',
+'bower_components/moment/min/moment.min.js',
 'src/js/**/*'
 ];
 
