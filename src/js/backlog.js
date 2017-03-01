@@ -83,7 +83,7 @@ var Backlog = (function () {
 
 				gapi.client.sheets.spreadsheets.values.get({
 					spreadsheetId: properties.spreadsheetId,
-					range: "Backlog Giftcard!A:F",
+					range: "Backlog Giftcard!A:F"
 				}).then(function(response) {
 
 					var range = response.result;
@@ -179,7 +179,7 @@ var Backlog = (function () {
 
 				gapi.client.sheets.spreadsheets.values.get({
 					spreadsheetId: properties.spreadsheetId,
-					range: "Backlog Cobranded!A:F",
+					range: "Backlog Cobranded!A:F"
 				}).then(function(response) {
 
 					var range = response.result;
@@ -277,7 +277,7 @@ var Backlog = (function () {
 
 					spreadsheetId: properties.spreadsheetId,
 
-					range: "Backlog Prepaid!A:H",
+					range: "Backlog Prepaid!A:F"
 
 				}).then(function(response) {
 
@@ -289,27 +289,27 @@ var Backlog = (function () {
 
 							var row = range.values[i];
 
-							var assingnedTo = row[5];
+							var assingnedTo = row[4];
 
-							if((assingnedTo && module.private.filterUser(assingnedTo)) && (!row[4].includes("DONE"))){
+							if((assingnedTo && module.private.filterUser(assingnedTo)) && (!row[3].includes("DONE"))){
 								
 								try{
 
 									properties.tasks.prepaid.push({
-										"priority": row[0],
-										"title": row[3],
-										"status": row[4],
+										"priority": row[1],
+										"title": row[2],
+										"status": row[3],
 										"assingnedTo": assingnedTo,
-										"detail": row[6].split('-').length > 1 ? row[6].split('-').slice(1).join('-') : '',
-										"time": row[6].split('-')[0]
+										"detail": row[5].split('-').length > 1 ? row[5].split('-').slice(1).join('-') : '',
+										"time": row[5].split('-')[0]
 									});
 
 								}catch(e){
 
 									properties.tasks.prepaid.push({
-										"priority": row[0],
-										"title": row[3],
-										"status": row[4],
+										"priority": row[1],
+										"title": row[2],
+										"status": row[3],
 										"assingnedTo": assingnedTo,
 										"detail": '',
 										"time": ''
